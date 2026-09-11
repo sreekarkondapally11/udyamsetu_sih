@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-100 text-slate-900 font-sans antialiased min-h-screen selection:bg-emerald-500 selection:text-white;
+  }
+}
+
+/* Custom smooth transitions & print styles */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  header, footer, button {
+    display: none !important;
+  }
+}
